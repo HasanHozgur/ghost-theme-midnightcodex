@@ -44,6 +44,6 @@ jobs:
           script: |
             cd /var/www/hasanhuseyinozgur.dev/content/themes
             rm -rf midnightcodex
-            git clone git@github.com:HasanHozgur/ghost-theme-midnightcodex.git midnightcodex
+            git clone https://github.com/HasanHozgur/ghost-theme-midnightcodex.git midnightcodex
             docker restart ghost-blog
             echo "✅ MidnightCodex theme deployed successfully!"
