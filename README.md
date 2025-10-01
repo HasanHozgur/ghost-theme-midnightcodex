@@ -23,3 +23,4 @@ This theme is built to learn Ghost theme development, including:
 ## License
 MIT
 EOF
+
