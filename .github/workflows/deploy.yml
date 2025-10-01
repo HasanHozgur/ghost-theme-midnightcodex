@@ -42,9 +42,8 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/hasan/ghost-blog/content/themes
+            cd /var/www/hasanhuseyinozgur.dev/content/themes
             rm -rf midnightcodex
             git clone git@github.com:HasanHozgur/ghost-theme-midnightcodex.git midnightcodex
-            cd /home/hasan
-            docker compose -f ghost-blog/docker-compose.yml restart
+            docker restart ghost-blog
             echo "✅ MidnightCodex theme deployed successfully!"
