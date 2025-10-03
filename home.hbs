@@ -1,0 +1,10 @@
+{{!< default}}
+
+<div style="background: lightblue; padding: 20px;">
+    <h1>THIS IS HOME.HBS - HOMEPAGE ONLY</h1>
+    {{#foreach posts limit="3"}}
+        <article>
+            <h2><a href="{{url}}">{{title}}</a></h2>
+        </article>
+    {{/foreach}}
+</div>  

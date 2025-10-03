@@ -1,50 +1,11 @@
-<!DOCTYPE html>
-<html lang="{{@site.locale}}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{meta_title}}</title>
-    <meta name="description" content="{{meta_description}}">
-    <link rel="stylesheet" href="{{asset "css/style.css"}}">
-    {{ghost_head}}
-</head>
-<body class="{{body_class}}">
-    
-    <header class="site-header">
-        <div class="container">
-            <h1 class="site-title">
-                <a href="{{@site.url}}">{{@site.title}}</a>
-            </h1>
-            <p class="site-description">{{@site.description}}</p>
-        </div>
-    </header>
+{{!< default}}
 
-    <main class="site-main">
-        <div class="container">
-            {{#foreach posts}}
-            <article class="post-card">
-                <h2 class="post-title">
-                    <a href="{{url}}">{{title}}</a>
-                </h2>
-                {{#if feature_image}}
-                <img class="post-image" src="{{feature_image}}" alt="{{title}}">
-                {{/if}}
-                <p class="post-excerpt">{{excerpt}}</p>
-                <div class="post-meta">
-                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MMMM DD, YYYY"}}</time>
-                </div>
-            </article>
-            {{/foreach}}
-        </div>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; {{date format="YYYY"}} {{@site.title}} - Built with Ghost</p>
-        </div>
-    </footer>
-
-    {{ghost_foot}}
-</body>
-</html>
-EOF
+<div style="background: lightgreen; padding: 20px;">
+    <h1>THIS IS INDEX.HBS - BLOG LISTING PAGES</h1>
+    {{#foreach posts}}
+        <article>
+            <h2><a href="{{url}}">{{title}}</a></h2>
+        </article>
+    {{/foreach}}
+    {{pagination}}
+</div>
