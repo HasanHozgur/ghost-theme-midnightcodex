@@ -20,6 +20,12 @@ body {
     background: var(--color-bg);
     color: var(--color-text);
     line-height: 1.6;
+    font-family: var(--gh-font-body, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--gh-font-heading, var(--gh-font-body));
 }
 
 .container {
@@ -158,3 +164,18 @@ body {
         font-size: 1.5rem;
     }
 }
+
+/* Ghost content card width classes - required by Ghost */
+.kg-width-wide {
+  width: 100vw;
+  max-width: 1200px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.kg-width-full {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+

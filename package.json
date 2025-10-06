@@ -5,6 +5,10 @@
   "engines": {
     "ghost": ">=5.0.0"
   },
+  "author": {
+  "name": "Hasan Hüseyin Özgür",
+  "email": "hasanhuseyinozgur@outlook.com.tr"
+  },
   "keywords": [
     "ghost",
     "theme",
@@ -14,4 +18,5 @@
     "posts_per_page": 1
   }
 }     
+
 

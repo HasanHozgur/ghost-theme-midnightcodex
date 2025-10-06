@@ -10,17 +10,31 @@ on:
 
 jobs:
   check:
-    name: Check Theme Structure
+    name: Theme Validation & Tests
     runs-on: ubuntu-latest
     
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
       
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Install GScan
+        run: npm install -g gscan
+      
+      - name: Run GScan validation
+        run: |
+          echo "🔍 Running Ghost theme validation..."
+          gscan . --verbose
+      
       - name: Verify required files
         run: |
           echo "📋 Checking theme structure..."
           test -f package.json && echo "✅ package.json found" || exit 1
+          test -f default.hbs && echo "✅ default.hbs found" || exit 1
           test -f index.hbs && echo "✅ index.hbs found" || exit 1
           test -f post.hbs && echo "✅ post.hbs found" || exit 1
           echo "✅ Theme structure looks good!"
