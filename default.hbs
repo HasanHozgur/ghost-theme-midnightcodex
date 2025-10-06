@@ -7,20 +7,9 @@
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-    
-    <header style="background: #333; color: white; padding: 20px;">
-        <h1><a href="{{@site.url}}">{{@site.title}}</a></h1>
-        <p>{{@site.description}}</p>
-    </header>
-
-    <main>
-        {{{body}}}
-    </main>
-
-    <footer style="background: #eee; padding: 20px; margin-top: 40px;">
-        <p>&copy; {{date format="YYYY"}} {{@site.title}}</p>
-    </footer>
-
+   {{> header}}
+    <main>{{{body}}}</main>
+    {{> footer}}
     {{ghost_foot}}
 </body>
 </html>
