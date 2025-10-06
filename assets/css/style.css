@@ -158,3 +158,17 @@ body {
         font-size: 1.5rem;
     }
 }
+
+/* Ghost content card width classes - required by Ghost */
+.kg-width-wide {
+  width: 100vw;
+  max-width: 1200px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.kg-width-full {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
