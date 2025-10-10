@@ -1,13 +1,13 @@
 {
   "name": "midnightcodex",
-  "description": "A custom Ghost theme for learning and showcasing Ghost development",
+  "description": "A custom Ghost theme of Hasan Hüseyin Özgür for learning and showcasing Ghost development",
   "version": "0.1.0",
   "engines": {
     "ghost": ">=5.0.0"
   },
   "author": {
-  "name": "Hasan Hüseyin Özgür",
-  "email": "hasanhuseyinozgur@outlook.com.tr"
+    "name": "Hasan Hüseyin Özgür",
+    "email": "hasanhuseyinozgur@outlook.com.tr"
   },
   "keywords": [
     "ghost",
@@ -15,8 +15,19 @@
     "ghost-theme"
   ],
   "config": {
-    "posts_per_page": 1
+    "posts_per_page": 1,
+    "custom": {
+      "background_image": {
+        "type": "image",
+        "description": "Background image for the entire site",
+        "default": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809"
+      },
+      "background_overlay_opacity": {
+        "type": "select",
+        "options": ["0.5", "0.6", "0.7", "0.8", "0.9"],
+        "default": "0.7",
+        "description": "Darkness of the overlay (higher = darker)"
+      }
+    }
   }
-}     
-
-
+}

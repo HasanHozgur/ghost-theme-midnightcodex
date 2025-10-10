@@ -4,6 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
+    <link rel="stylesheet" href="{{asset "css/style.css"}}">
+    <style>
+        body {
+            background-image: url('{{@custom.background_image}}');
+        }
+        body::before {
+            background-color: rgba(0, 0, 0, {{@custom.background_overlay_opacity}});
+        }
+    </style>
+    
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
