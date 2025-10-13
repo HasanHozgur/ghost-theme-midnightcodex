@@ -32,41 +32,41 @@
     "pump": "^3.0.2"
 },
   "config": {
-    "posts_per_page": 1,
-    "custom": {
-      "background_type": {
-        "type": "select",
-        "options": ["Image", "Color"],
-        "default": "Image",
-        "description": "Choose between image or solid color background"
-      },
-      "background_image": {
-        "type": "image",
-        "description": "Background image (recommended: 1920x1080px or larger and under 1MB)",
-        "default": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809"
-      },
-      "background_color": {
-        "type": "color",
-        "default": "#1a1a1a",
-        "description": "Background color (used as fallback for images or as primary background)"
-      },
-      "background_position": {
-        "type": "select",
-        "options": ["Center", "Top", "Bottom", "Left", "Right", "Top Left", "Top Right", "Bottom Left", "Bottom Right"],
-        "default": "Center",
-        "description": "Image focal point when cropped"
-      },
-      "background_overlay_opacity": {
-        "type": "select",
-        "options": ["0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9"],
-        "default": "0.7",
-        "description": "Overlay darkness (higher = darker, better readability)"
-      },
-      "show_background_on_mobile": {
-        "type": "boolean",
-        "default": true,
-        "description": "Display background image on mobile devices (disable to improve mobile performance)"
-      }
+  "posts_per_page": 1,
+  "card_assets": true,
+  "custom": {
+    "background_type": {
+      "type": "select",
+      "options": ["Image", "Color"],
+      "default": "Image",
+      "description": "Choose between image or solid color background"
+    },
+    "background_image": {
+      "type": "image",
+      "description": "Background image (recommended: 1920x1080, under 1MB, use CDN URLs like Unsplash/Cloudinary for auto-optimization)"
+    },
+    "background_color": {
+      "type": "color",
+      "default": "#1a1a1a",
+      "description": "Background color (used as fallback for images or as primary background)"
+    },
+    "background_position": {
+      "type": "select",
+      "options": ["Center", "Top", "Bottom", "Left", "Right", "Top Left", "Top Right", "Bottom Left", "Bottom Right"],
+      "default": "Center",
+      "description": "Image focal point when cropped"
+    },
+    "background_overlay_opacity": {
+      "type": "select",
+      "options": ["0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9"],
+      "default": "0.7",
+      "description": "Overlay darkness (higher = darker, better readability)"
+    },
+    "show_background_on_mobile": {
+      "type": "boolean",
+      "default": true,
+      "description": "Display background image on mobile devices (disable to improve mobile performance)"
     }
   }
+}
 }
