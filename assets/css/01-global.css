@@ -1,0 +1,58 @@
+:root {
+    --color-text: #FCFDFE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;   
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--gh-font-heading, var(--gh-font-body));
+}
+
+/* Ghost content card width classes - required by Ghost */
+.kg-width-wide {
+    width: 100vw;
+    max-width: 1200px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.kg-width-full {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
