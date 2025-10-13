@@ -1,5 +1,23 @@
+# Dependencies
 node_modules/
+
+# Build artifacts
+dist/
+
+# OS files
 .DS_Store
-*.log
-.ghost-version
 Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Ghost
+.ghost-version
+
+# Editor
+.vscode/
+.idea/
+
+# Don't ignore built CSS (if using Option B)
+# !assets/built/

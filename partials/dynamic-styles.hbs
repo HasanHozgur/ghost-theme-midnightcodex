@@ -1,0 +1,23 @@
+<style>
+    body {
+        background-color: {{@custom.background_color}};
+        {{#match @custom.background_type "Image"}}
+        background-image: url('{{@custom.background_image}}');
+        background-position: {{@custom.background_position}};
+        {{else}}
+        background-image: none;
+        {{/match}}
+    }
+    
+    {{#unless @custom.show_background_on_mobile}}
+    @media (max-width: 768px) {
+        body {
+            background-image: none !important;
+        }
+    }
+    {{/unless}}
+    
+    body::before {
+        background-color: rgba(0, 0, 0, {{@custom.background_overlay_opacity}});
+    }
+</style>
