@@ -1,8 +1,12 @@
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+
 .header__container {
     display: grid;
-    grid-template-columns: auto 1fr;  
-    align-items: center;               
-    padding: 5px 0px;         
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 5px 0px;
     color: var(--color-text);
 }
 
@@ -13,13 +17,12 @@
 
 .header__logo a {
     color: var(--color-text);
-    text-decoration: none;   
-}   
+    text-decoration: none;
+}
 
 .header__nav {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
 }
 
 .header__nav .nav {
@@ -34,9 +37,32 @@
     color: var(--color-text);
 }
 
-/* Search and Theme Toggle (inline with menu) */
-.header__search,
-.header__theme-toggle {
+.header__nav .nav a:hover {
+    color: var(--color-hover);
+}
+
+/* Active page - underline */
+.header__nav .nav .nav-current a {
+    text-decoration: none;  
+    position: relative;
+}
+
+.header__nav .nav .nav-current a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px; 
+    background-color: var(--color-text);
+}
+
+.header__nav .nav .nav-current a:hover::after {
+    background-color: var(--color-hover);
+}
+
+/* Search button */
+.header__search {
     background: none;
     border: none;
     color: var(--color-text);
@@ -45,66 +71,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
-    transition: opacity 0.3s, background-color 0.3s;
     margin-left: 15px;
 }
 
-.header__search:hover,
-.header__theme-toggle:hover {
-    opacity: 0.7;
-    background-color: rgba(255, 255, 255, 0.1);
+.header__search:hover {
+    color: var(--color-hover);
 }
 
-.header__search svg,
-.header__theme-toggle svg {
+.header__search svg {
     display: block;
 }
 
-/* Theme toggle icons */
+/* Theme toggle button */
 .header__theme-toggle {
     position: relative;
-}
-
-.theme-icon {
-    transition: opacity 0.3s;
-}
-
-/* Show sun by default (light mode active) */
-.theme-icon--light {
-    opacity: 1;
-}
-
-.theme-icon--dark {
-    opacity: 0.3;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* When you add functionality later, toggle these classes */
-/* .dark-mode .theme-icon--light { opacity: 0.3; }
-.dark-mode .theme-icon--dark { opacity: 1; } */
-
-/* Theme toggle - CSS only */
-.header__theme-toggle {
-    position: relative;
+    background: none;
+    border: none;
+    color: var(--color-text);
     cursor: pointer;
     padding: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    margin-left: 15px;
 }
 
 .header__theme-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-hover);
 }
 
-/* Hide the checkbox */
+/* Hide checkbox */
 .theme-toggle-checkbox {
     position: absolute;
     opacity: 0;
@@ -112,31 +107,25 @@
     height: 0;
 }
 
-/* Icon positioning */
+/* Theme icons */
 .theme-icon {
     display: block;
-    transition: opacity 0.3s, transform 0.3s;
 }
 
-.theme-icon--dark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Default: Show sun, hide moon */
 .theme-icon--light {
     opacity: 1;
     transform: rotate(0deg);
 }
 
 .theme-icon--dark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     opacity: 0;
     transform: translate(-50%, -50%) rotate(90deg);
 }
 
-/* When checkbox is checked: Hide sun, show moon */
+/* Toggle state */
 .theme-toggle-checkbox:checked ~ .theme-icon--light {
     opacity: 0;
     transform: rotate(-90deg);
