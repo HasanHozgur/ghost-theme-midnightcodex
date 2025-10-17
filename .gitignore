@@ -3,6 +3,7 @@ node_modules/
 
 # Build artifacts
 dist/
+assets/built/
 
 # OS files
 .DS_Store
@@ -19,5 +20,9 @@ npm-debug.log*
 .vscode/
 .idea/
 
-# Don't ignore built CSS (if using Option B)
-# !assets/built/assets/built/
+# Environment
+.env
+.env.*
+config.*.json
+
+
